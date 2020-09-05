@@ -9,8 +9,37 @@ This is a general repository template for all projects done by the organization 
 
 ----
 
+## Requirements:
+
+- [pnpm](https://pnpm.js.org/en/installation)
+
 ## Getting started:
-tbd
+
+1. Install needed packages
+```
+pnpm install
+```
+
+## Developer:
+
+- Compiles and hot-reloads for development
+```
+pnpm run serve
+```
+
+- Compiles and minifies for production
+```
+pnpm run build
+```
+
+- Lints and fixes files
+```
+pnpm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
 
 ## Contributing
 
@@ -31,15 +60,15 @@ If you want to take part in contribution, like fixing issues and contributing di
 <!-- Variables -->
 [github-team]: https://github.com/lazybytez
 
-[github-license]: https://github.com/lazybytez/general-template/blob/master/LICENSE
-[github-contribute]: https://github.com/lazybytez/general-template/blob/master/CONTRIBUTING.md
-[github-codeofconduct]: https://github.com/lazybytez/general-template/blob/master/CODE_OF_CONDUCT.md
-[github-issues]: https://github.com/lazybytez/general-template/issues
-[github-pulls]: https://github.com/lazybytez/general-template/pulls
-[github-security]: https://github.com/lazybytez/general-template/blob/master/SECURITY.md
+[github-license]: https://github.com/lazybytez/lazybytez/blob/master/LICENSE
+[github-contribute]: https://github.com/lazybytez/lazybytez/blob/master/CONTRIBUTING.md
+[github-codeofconduct]: https://github.com/lazybytez/lazybytez/blob/master/CODE_OF_CONDUCT.md
+[github-issues]: https://github.com/lazybytez/lazybytez/issues
+[github-pulls]: https://github.com/lazybytez/lazybytez/pulls
+[github-security]: https://github.com/lazybytez/lazybytez/blob/master/SECURITY.md
 
-[commit-info]: https://img.shields.io/github/last-commit/lazybytez/general-template?style=flat-square
+[commit-info]: https://img.shields.io/github/last-commit/lazybytez/lazybytez?style=flat-square
 
-[contributors-info]: https://img.shields.io/github/contributors/lazybytez/general-template?style=flat-square
+[contributors-info]: https://img.shields.io/github/contributors/lazybytez/lazybytez?style=flat-square
 
-[reposize-info]: https://img.shields.io/github/repo-size/lazybytez/general-template?style=flat-square
+[reposize-info]: https://img.shields.io/github/repo-size/lazybytez/lazybytez?style=flat-square
