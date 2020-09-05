@@ -1,5 +1,5 @@
-# General Template
-This is a general repository template for all projects done by the organization lazybytez. You can use it if you want. Just be sure to modify the names and emails.
+# Lazybytez
+A static website for general information of what we are doing.
 
 ---- 
 
