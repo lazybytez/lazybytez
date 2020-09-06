@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: git checkout github-pages
+    - run: git checkout origin/github-pages
     - run: git reset --hard origin/master
     - run: git config --global user.email "elias.knodel@gmail.com"
     - run: git config --global user.name "elias-knodel"
