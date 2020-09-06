@@ -1,0 +1,30 @@
+name: Deploy GitHub Pages
+
+on:
+    push:
+      branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy GitHub Pages
+      uses: actions/setup-node@v1
+      with:
+        token: ${{ github.token }}
+        ref: 'github-pages'
+        node-version: ${{ matrix.node-version }}
+      run:
+        git reset --hard origin/master
+        git config --global user.email "elias.knodel@gmail.com"
+        git config --global user.name "elias-knodel"
+        npm run build
+        rm -r !(dist)
+        mv  -v ~/dist/* ~/
+        git push --force
