@@ -20,11 +20,10 @@ jobs:
         token: ${{ github.token }}
         ref: 'github-pages'
         node-version: ${{ matrix.node-version }}
-      run:
-        git reset --hard origin/master
-        git config --global user.email "elias.knodel@gmail.com"
-        git config --global user.name "elias-knodel"
-        npm run build
-        rm -r !(dist)
-        mv  -v ~/dist/* ~/
-        git push --force
+    - run: git reset --hard origin/master
+    - run: git config --global user.email "elias.knodel@gmail.com"
+    - run: git config --global user.name "elias-knodel"
+    - run: npm run build
+    - run: rm -r !(dist)
+    - run: mv  -v ~/dist/* ~/
+    - run: git push --force
