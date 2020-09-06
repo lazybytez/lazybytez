@@ -28,7 +28,7 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: npm run build
-    - run: mv dist/**/* .
+    - run: mv dist/* .
     - run: git add .
     - run: git commit -m "Add github pages files"
     - run: git push --force
