@@ -24,6 +24,7 @@ jobs:
     - run: git config --global user.email "elias.knodel@gmail.com"
     - run: git config --global user.name "elias-knodel"
     - run: npm install
+    - run: npm run lint
     - run: npm run build
     - run: rm -r !(dist)
     - run: mv  -v ~/dist/* ~/
