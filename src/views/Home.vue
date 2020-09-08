@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <Index msg="Welcome to Your Vue.js App"/>
+    <Homepage msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Index from '@/components/Index.vue'
+import Homepage from '@/components/Homepage.vue'
 
 export default {
   name: 'Home',
   components: {
-    Index
+    Homepage
   }
 }
 </script>
