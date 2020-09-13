@@ -1,17 +1,20 @@
 <template>
   <div class="home">
-    <Homepage msg="Welcome to Your Vue.js App"/>
+    <Homepage/>
+    <GithubProjects/>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import Homepage from '@/components/Homepage.vue'
+<script lang="ts">
+import Vue from "vue"
+import Homepage from "@/components/Homepage.vue"
+import GithubProjects from "@/components/GithubProjects.vue"
 
-export default {
-  name: 'Home',
+export default Vue.extend({
+  name: "Home",
   components: {
-    Homepage
+    Homepage,
+    GithubProjects
   }
-}
+})
 </script>

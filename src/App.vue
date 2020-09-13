@@ -1,26 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <div class="block-left">
-        <router-link to="/"><h1 class="middle">Home</h1></router-link>
-      </div>
-      <div class="block-right">
-        <router-link to="/about"><h1 class="middle">About</h1></router-link>
-      </div>
+      <router-link to="/"><font-awesome-icon :icon="['fas', 'home']" /></router-link>
+      <router-link to="/gaming"><font-awesome-icon :icon="['fas', 'gamepad']" /></router-link>
     </div>
     <router-view/>
+    <footer></footer>
   </div>
 </template>
 
 <style lang="less">
-
 html {
   body {
+    background-color: #161E2D;
     margin: 0;
     padding: 0;
-    section, div {
-      height: 100vh;
-    }
   }
 }
 
@@ -29,35 +23,64 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #dcddde;
 }
-
 #nav {
-  display: grid;
-  .block-left {
-    background-color: #222C45;
-    grid-column: 1;
-    a {
-      color: #F35353;
-    }
-  }
-  .block-right {
-    background-color: #F35353;
-    grid-column: 2;
-    a {
-      color: #222C45;
-      &.router-link-exact-active {
-        color: #01E6CE;
-      }
-    }
-  }
-
+  position:absolute;
+  top: 0em;
+  left: -10em;
+  width: 30em;
+  background-color: #222C45;
+  display: flex;
+  border-top: 5px solid #F35353;
+  border-bottom: 5px solid #F35353;
+  justify-content: center;
+  transform: rotate(-45deg);
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    margin: 50px 10px 50px 10px;
+    font-size: 2em;
+    color: #ffffff;
+    opacity: 0.6;
     &.router-link-exact-active {
       color: #42b983;
+      opacity: 1;
+    }
+    &:hover {
+      color: #42b983;
+    }
+    &:first-child {
+      margin-left: 0px;
+    }
+    &:last-child {
+      margin-right: 0px;
     }
   }
+
+  // display: grid;
+  // .block-left {
+  //   background-color: #222C45;
+  //   grid-column: 1;
+  //   a {
+  //     color: #F35353;
+  //   }
+  // }
+  // .block-right {
+  //   background-color: #F35353;
+  //   grid-column: 2;
+  //   a {
+  //     color: #222C45;
+  //     &.router-link-exact-active {
+  //       color: #01E6CE;
+  //     }
+  //   }
+  // }
+
+  // a {
+  //   font-weight: bold;
+  //   color: #2c3e50;
+  //   &.router-link-exact-active {
+  //     color: #42b983;
+  //   }
+  // }
 }
 </style>

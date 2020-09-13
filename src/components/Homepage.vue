@@ -1,27 +1,16 @@
 <template>
-  <div class="hello">
-    <h1>This website is currently in maintenance</h1>
-    <h2>Please stand by . . .</h2>
+  <div class="homepage">
+    <div class="introduction">
+      <h1>Welcome to LazyBytez!</h1>
+      <h2>Just a few people who like developing stuff.</h2>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-</script>
+import Vue from "vue"
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="less">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+export default Vue.extend({
+  name: "Homepage"
+})
+</script>
