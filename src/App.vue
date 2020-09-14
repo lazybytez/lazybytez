@@ -5,7 +5,9 @@
       <router-link to="/gaming"><font-awesome-icon :icon="['fas', 'gamepad']" /></router-link>
     </div>
     <router-view/>
-    <footer></footer>
+    <footer id="footer">
+      <p>Coded with <font-awesome-icon class="thin" :icon="['far', 'heart']" /> </p>
+    </footer>
   </div>
 </template>
 
@@ -17,7 +19,6 @@ html {
     padding: 0;
   }
 }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,32 +56,13 @@ html {
       margin-right: 0px;
     }
   }
-
-  // display: grid;
-  // .block-left {
-  //   background-color: #222C45;
-  //   grid-column: 1;
-  //   a {
-  //     color: #F35353;
-  //   }
-  // }
-  // .block-right {
-  //   background-color: #F35353;
-  //   grid-column: 2;
-  //   a {
-  //     color: #222C45;
-  //     &.router-link-exact-active {
-  //       color: #01E6CE;
-  //     }
-  //   }
-  // }
-
-  // a {
-  //   font-weight: bold;
-  //   color: #2c3e50;
-  //   &.router-link-exact-active {
-  //     color: #42b983;
-  //   }
-  // }
+}
+#footer {
+  background-color: #1A2737;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 </style>

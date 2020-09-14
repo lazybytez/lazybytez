@@ -3,7 +3,7 @@
     <h2>Our GitHub Projects:</h2>
     <div class="dynamic-grid3c">
       <article v-bind:key="project.id" v-for="project in ghprojects" class="grid-item3c" >
-        <h2>{{ project.name }}</h2>
+        <a v-bind:href="project.url"><h2>{{ project.name }}</h2></a>
       </article>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default class GithubProjects extends Vue {
         repoArray[i] = {
           id: i,
           name: element.name,
-          url: element.url
+          url: element.html_url
         }
       }
       this.ghprojects = repoArray
@@ -48,15 +48,23 @@ export default class GithubProjects extends Vue {
   grid-gap: 20px;
   justify-content: center;
   .grid-item3c {
+    border-radius: 10px;
     background-color: #1A2737;
     width: 360px;
     height: 360px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    h2 {
-      margin: 0;
-      padding: 166px 0 166px 0;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
+    a {
+      text-decoration: none;
+      h2 {
+        margin: 0;
+        padding: 166px 0 166px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: #dcddde;
+        &:hover {
+          color: #42b983;
+        }
+      }
     }
   }
 }
