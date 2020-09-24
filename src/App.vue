@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <Index/>
+    <AppHeader/>
+    <router-view/>
+    <AppFooter/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Index from './components/Index.vue'
+import Vue from "vue"
+import AppHeader from "@/components/AppHeader"
+import AppFooter from "@/components/AppFooter"
 
-@Component({
+export default Vue.extend({
+  name: "Home",
   components: {
-    Index
+    AppHeader,
+    AppFooter
   }
 })
-export default class App extends Vue {}
 </script>
 
 <style lang="less">
+html {
+  body {
+    background-color: #161E2D;
+    margin: 0;
+    padding: 0;
+  }
+  :hover {
+    transition: 0.06s;
+  }
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #dcddde;
 }
 </style>
