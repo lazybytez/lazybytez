@@ -6,9 +6,11 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue"
+import { Vue, Component } from "vue-property-decorator"
 
-export default Vue.component("AppHeader", {})
+@Component({ name: "AppHeader" })
+export default class AppHeader extends Vue {
+}
 </script>
 
 <style lang="less">

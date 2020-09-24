@@ -5,9 +5,11 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue"
+import { Vue, Component } from "vue-property-decorator"
 
-export default Vue.component("Emptyspace", {})
+@Component({ name: "Emptyspace" })
+export default class Emptyspace extends Vue {
+}
 </script>
 
 <style lang="less">
