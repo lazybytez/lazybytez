@@ -1,15 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/"><font-awesome-icon :icon="['fas', 'home']" /></router-link>
-      <router-link to="/gaming"><font-awesome-icon :icon="['fas', 'gamepad']" /></router-link>
-    </div>
+    <AppHeader/>
     <router-view/>
-    <footer id="footer">
-      <p>Coded with <font-awesome-icon class="thin" :icon="['far', 'heart']" /> </p>
-    </footer>
+    <AppFooter/>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue"
+import AppHeader from "@/components/AppHeader"
+import AppFooter from "@/components/AppFooter"
+
+export default Vue.extend({
+  name: "Home",
+  components: {
+    AppHeader,
+    AppFooter
+  }
+})
+</script>
 
 <style lang="less">
 html {
@@ -18,6 +27,9 @@ html {
     margin: 0;
     padding: 0;
   }
+  :hover {
+    transition: 0.06s;
+  }
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -25,44 +37,5 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #dcddde;
-}
-#nav {
-  position:absolute;
-  top: 0em;
-  left: -10em;
-  width: 30em;
-  background-color: #222C45;
-  display: flex;
-  border-top: 5px solid #F35353;
-  border-bottom: 5px solid #F35353;
-  justify-content: center;
-  transform: rotate(-45deg);
-  a {
-    margin: 50px 10px 50px 10px;
-    font-size: 2em;
-    color: #ffffff;
-    opacity: 0.6;
-    &.router-link-exact-active {
-      color: #42b983;
-      opacity: 1;
-    }
-    &:hover {
-      color: #42b983;
-    }
-    &:first-child {
-      margin-left: 0px;
-    }
-    &:last-child {
-      margin-right: 0px;
-    }
-  }
-}
-#footer {
-  background-color: #1A2737;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
 }
 </style>

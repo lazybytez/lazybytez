@@ -1,6 +1,7 @@
 import Vue from "vue"
 import VueRouter, { RouteConfig } from "vue-router"
-import Home from "../views/Home.vue"
+import Home from "@/views/Home.vue"
+import Gaming from "@/views/Gaming.vue"
 
 Vue.use(VueRouter)
 
@@ -13,7 +14,7 @@ const routes: Array<RouteConfig> = [
   {
     path: "/gaming",
     name: "Gaming",
-    component: () => import("../views/Gaming.vue")
+    component: Gaming
   }
 ]
 

@@ -40,7 +40,7 @@ export default class GithubProjects extends Vue {
 
 <style lang="less" scoped>
 .github-projects {
-  margin: 250px 0 0 0;
+  margin: 250px 0 150px 0;
 }
 .dynamic-grid3c {
   display: grid;
