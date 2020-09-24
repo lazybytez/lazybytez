@@ -9,9 +9,11 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue"
+import { Vue, Component } from "vue-property-decorator"
 
-export default Vue.component("AppFooter", {})
+@Component({ name: "AppFooter" })
+export default class AppFooter extends Vue {
+}
 </script>
 
 <style lang="less">
