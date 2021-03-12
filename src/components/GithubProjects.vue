@@ -25,10 +25,13 @@ export default class GithubProjects extends Vue {
       const data = JSON.parse(request.response)
       for (let i = 0; i < data.length; i++) {
         const element = data[i]
-        repoArray[i] = {
-          id: i,
-          name: element.name,
-          url: element.html_url
+        if (element.name !== "general-template") {
+          const repo = {
+            id: i,
+            name: element.name,
+            url: element.html_url
+          }
+          repoArray.push(repo)
         }
       }
       this.ghprojects = repoArray

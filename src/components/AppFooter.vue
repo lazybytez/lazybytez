@@ -2,7 +2,10 @@
   <div class="footer">
     <footer id="footer">
       <div class="footer-inner">
-        <span>Check out our</span><a target="_blank" href="https://discord.gg/Ns8Yygf"><font-awesome-icon class="bigIcon" :icon="['fab', 'discord']" /></a>
+        <span>Check out our</span>
+        <a target="_blank" href="https://discord.gg/Ns8Yygf">
+          <font-awesome-icon class="bigIcon" :icon="['fab', 'discord']" />
+        </a>
       </div>
     </footer>
   </div>

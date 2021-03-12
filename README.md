@@ -1,13 +1,11 @@
 # Lazybytez
-A static website for general information of what we are doing.
-
----- 
 
   ![commit-info][commit-info]
   ![contributors-info][contributors-info]
   ![reposize-info][reposize-info]
 
-----
+## Description:
+A static website for general information of what we are doing.
 
 ## Requirements:
 
@@ -40,9 +38,7 @@ pnpm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
 ## Contributing
-
 If you want to take part in contribution, like fixing issues and contributing directly to the code base, plase visit the [How to Contribute][github-contribute] document.
 
 ## Useful links:
@@ -53,9 +49,9 @@ If you want to take part in contribution, like fixing issues and contributing di
 [Pull requests][github-pulls] - 
 [Security][github-security] 
 
-<hr>  
+<hr>
 
-###### Copyright (c) [Lazy Bytez][github-team]. All rights reserved | Licensed under the MIT license. | 2020 - today
+###### Copyright (c) [Lazy Bytez][github-team]. All rights reserved | Licensed under the MIT license.
 
 <!-- Variables -->
 [github-team]: https://github.com/lazybytez

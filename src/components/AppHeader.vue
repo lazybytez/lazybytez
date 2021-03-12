@@ -1,7 +1,6 @@
 <template>
   <div id="nav">
     <router-link to="/"><font-awesome-icon :icon="['fas', 'home']" /></router-link>
-    <router-link to="/gaming"><font-awesome-icon :icon="['fas', 'gamepad']" /></router-link>
   </div>
 </template>
 
