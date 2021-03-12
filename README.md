@@ -13,30 +13,26 @@ A static website for general information of what we are doing.
 
 ## Getting started:
 
-1. Install needed packages
+1. Install needed packages:
 ```
 pnpm install
 ```
 
-## Developer:
+## Development:
 
-- Compiles and hot-reloads for development
-```
-pnpm run serve
-```
+```bash
+# serve with hot reload at localhost:3000
+$ pnpm run dev
 
-- Compiles and minifies for production
-```
-pnpm run build
-```
+# build for production and launch server
+$ pnpm run build
+$ pnpm run start
 
-- Lints and fixes files
-```
-pnpm run lint
+# generate static project
+$ pnpm run generate
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## Contributing
 If you want to take part in contribution, like fixing issues and contributing directly to the code base, plase visit the [How to Contribute][github-contribute] document.
@@ -49,7 +45,7 @@ If you want to take part in contribution, like fixing issues and contributing di
 [Pull requests][github-pulls] - 
 [Security][github-security] 
 
-<hr>
+<hr>  
 
 ###### Copyright (c) [Lazy Bytez][github-team]. All rights reserved | Licensed under the MIT license.
 
