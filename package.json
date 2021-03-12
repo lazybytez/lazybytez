@@ -1,5 +1,5 @@
 {
-  "name": "lazybytez-new",
+  "name": "lazybytez",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,13 +8,14 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js",
+    "lint": "yarn lint:js",
     "test": "jest"
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
     "@nuxt/typescript-runtime": "^2.0.1",
     "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12"
   },

@@ -9,27 +9,30 @@ A static website for general information of what we are doing.
 
 ## Requirements:
 
-- [pnpm](https://pnpm.js.org/en/installation)
+- [yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
 ## Getting started:
 
 1. Install needed packages:
 ```
-pnpm install
+yarn install
 ```
 
 ## Development:
 
 ```bash
+# lint and check files
+$ yarn lint
+
 # serve with hot reload at localhost:3000
-$ pnpm run dev
+$ yarn dev
 
 # build for production and launch server
-$ pnpm run build
-$ pnpm run start
+$ yarn build
+$ yarn start
 
 # generate static project
-$ pnpm run generate
+$ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
