@@ -1,10 +1,10 @@
 name: Deploy GitHub Pages
 
 on:
-    push:
-      branches:       
-        - master
-        - feature/nuxt
+  push:
+    branches:       
+      - master
+      - feature/nuxt
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         token: ${{ github.token }}
-        ref: 'github-pages'
+        ref: 'github-pages-test'
 
     - name: Setup node env
       uses: actions/setup-node@v2.1.2
@@ -49,5 +49,5 @@ jobs:
     - run: yarn generate
     - run: mv dist/* .
     - run: git add .
-    - run: git commit -m "Add github pages files"
+    - run: git commit -m "Deploy github pages"
     - run: git push --force
