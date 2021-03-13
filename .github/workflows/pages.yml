@@ -42,13 +42,13 @@ jobs:
 
       - name: Push generated to github-pages branch
         run: |
-        git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
-        git reset --hard remotes/origin/master
-        git config --global user.email "elias.knodel@gmail.com"
-        git config --global user.name "elias-knodel"
-        yarn
-        yarn generate
-        mv dist/* .
-        git add .
-        git commit -m "Deploy github pages"
-        git push --force
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+          git reset --hard remotes/origin/master
+          git config --global user.email "elias.knodel@gmail.com"
+          git config --global user.name "elias-knodel"
+          yarn
+          yarn generate
+          mv dist/* .
+          git add .
+          git commit -m "Deploy github pages"
+          git push --force
