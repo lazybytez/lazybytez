@@ -15,7 +15,7 @@ A static website for general information of what we are doing.
 
 1. Install needed packages:
 ```
-yarn install
+yarn
 ```
 
 ## Development:
