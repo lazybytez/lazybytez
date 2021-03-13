@@ -16,38 +16,38 @@ jobs:
         node: [14]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        token: ${{ github.token }}
-        ref: 'github-pages-test'
-
-    - name: Setup node env
-      uses: actions/setup-node@v2.1.2
-      with:
-        node-version: ${{ matrix.node }}
-
-    - name: Get yarn cache directory path 🛠
-      id: yarn-cache-dir-path
-      run: echo "::set-output name=dir::$(yarn cache dir)"
-    
-    - name: Cache node_modules
-      uses: actions/cache@v2
-      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-      with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
-
-    - name: Deploy GitHub Pages
-    - run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
-    - run: git reset --hard remotes/origin/master
-    - run: git config --global user.email "elias.knodel@gmail.com"
-    - run: git config --global user.name "elias-knodel"
-    - run: yarn
-    - run: yarn generate
-    - run: mv dist/* .
-    - run: git add .
-    - run: git commit -m "Deploy github pages"
-    - run: git push --force
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ github.token }}
+          ref: 'github-pages-test'
+  
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+  
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+  
+      - name: Deploy GitHub Pages
+      - run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+      - run: git reset --hard remotes/origin/master
+      - run: git config --global user.email "elias.knodel@gmail.com"
+      - run: git config --global user.name "elias-knodel"
+      - run: yarn
+      - run: yarn generate
+      - run: mv dist/* .
+      - run: git add .
+      - run: git commit -m "Deploy github pages"
+      - run: git push --force
