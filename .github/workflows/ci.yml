@@ -1,12 +1,17 @@
-name: Deploy GitHub Pages
+name: ci
 
 on:
   push:
-    branches:       
+    branches:
       - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
 
 jobs:
-  deploy:
+  ci:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -16,17 +21,14 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          token: ${{ github.token }}
-          ref: 'github-pages-test'
+        uses: actions/checkout@master
 
       - name: Setup node env
         uses: actions/setup-node@v2.1.2
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Get yarn cache directory path
+      - name: Get yarn cache directory path 🛠
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
@@ -39,15 +41,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Push generated to github-pages branch
-        run: |
-          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
-          git reset --hard remotes/origin/master
-          git config --global user.email "elias.knodel@gmail.com"
-          git config --global user.name "elias-knodel"
-          yarn
-          yarn generate
-          mv dist/* .
-          git add .
-          git commit -m "Deploy github pages"
-          git push --force
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run linter
+        run: yarn lint
+
+      - name: Run tests
+        run: yarn test

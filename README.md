@@ -1,48 +1,43 @@
 # Lazybytez
-A static website for general information of what we are doing.
-
----- 
 
   ![commit-info][commit-info]
   ![contributors-info][contributors-info]
   ![reposize-info][reposize-info]
 
-----
+## Description:
+A static website for general information of what we are doing.
 
 ## Requirements:
 
-- [pnpm](https://pnpm.js.org/en/installation)
+- [yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
 ## Getting started:
 
-1. Install needed packages
+1. Install needed packages:
 ```
-pnpm install
-```
-
-## Developer:
-
-- Compiles and hot-reloads for development
-```
-pnpm run serve
+yarn
 ```
 
-- Compiles and minifies for production
-```
-pnpm run build
+## Development:
+
+```bash
+# lint and check files
+$ yarn lint
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
 ```
 
-- Lints and fixes files
-```
-pnpm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## Contributing
-
 If you want to take part in contribution, like fixing issues and contributing directly to the code base, plase visit the [How to Contribute][github-contribute] document.
 
 ## Useful links:
@@ -55,7 +50,7 @@ If you want to take part in contribution, like fixing issues and contributing di
 
 <hr>  
 
-###### Copyright (c) [Lazy Bytez][github-team]. All rights reserved | Licensed under the MIT license. | 2020 - today
+###### Copyright (c) [Lazy Bytez][github-team]. All rights reserved | Licensed under the MIT license.
 
 <!-- Variables -->
 [github-team]: https://github.com/lazybytez
