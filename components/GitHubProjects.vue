@@ -18,7 +18,10 @@ export default {
     }
   },
   async fetch () {
-    this.repos = await fetch('https://api.github.com/orgs/lazybytez/repos').then(res => res.json())
+    this.repos = await fetch('https://api.github.com/orgs/lazybytez/repos')
+      .then(
+        res => res.json()
+      )
   }
 }
 </script>
