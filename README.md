@@ -1,69 +1,11 @@
-# Lazybytez
+# STATIC
 
-  ![commit-info][commit-info]
-  ![contributors-info][contributors-info]
-  ![reposize-info][reposize-info]
+**This directory is not required, you can delete it if you don't want to use it.**
 
-## Description:
-A static website for general information of what we are doing.
+This directory contains your static files.
+Each file inside this directory is mapped to `/`.
+Thus you'd want to delete this README.md before deploying to production.
 
-## Requirements:
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
 
-- [yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
-
-## Getting started:
-
-1. Install needed packages:
-```
-yarn
-```
-
-## Development:
-
-```bash
-# lint and check files
-$ yarn lint
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-
-## Contributing
-If you want to take part in contribution, like fixing issues and contributing directly to the code base, plase visit the [How to Contribute][github-contribute] document.
-
-## Useful links:
-[License][github-license] - 
-[Contributing][github-contribute] - 
-[Code of conduct][github-codeofconduct] - 
-[Issues][github-issues] - 
-[Pull requests][github-pulls] - 
-[Security][github-security] 
-
-<hr>  
-
-###### Copyright (c) [Lazy Bytez][github-team]. All rights reserved | Licensed under the MIT license.
-
-<!-- Variables -->
-[github-team]: https://github.com/lazybytez
-
-[github-license]: https://github.com/lazybytez/lazybytez/blob/master/LICENSE
-[github-contribute]: https://github.com/lazybytez/lazybytez/blob/master/CONTRIBUTING.md
-[github-codeofconduct]: https://github.com/lazybytez/lazybytez/blob/master/CODE_OF_CONDUCT.md
-[github-issues]: https://github.com/lazybytez/lazybytez/issues
-[github-pulls]: https://github.com/lazybytez/lazybytez/pulls
-[github-security]: https://github.com/lazybytez/lazybytez/blob/master/SECURITY.md
-
-[commit-info]: https://img.shields.io/github/last-commit/lazybytez/lazybytez?style=flat-square
-
-[contributors-info]: https://img.shields.io/github/contributors/lazybytez/lazybytez?style=flat-square
-
-[reposize-info]: https://img.shields.io/github/repo-size/lazybytez/lazybytez?style=flat-square
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).
